@@ -171,3 +171,4 @@ text = "Restart"
 
 [node name="ShootSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0ht5y")
+bus = &"SFX"

@@ -22,7 +22,7 @@ func _ready():
 	shoot_sound.volume_db = GAME_VOLUME
 	
 	# Hide mouse and trap to screen
-	#######################Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	# Get animated sprite 2d, signal is emitted when animation is finished, use it to call shoot_anim_done()
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
 	# When button up / release signal is emitted from the DeathScreen button, run restart()
@@ -84,10 +84,20 @@ func _physics_process(delta):
 			else:
 				next_delta_rotate_z = ease(0.15, 1.5)
 			
-			# Lerp Camera to hit ground
-			# From pos.y 1.5m to 0.2m
-			# Very choppy this way
-			$Camera3D.position.y = (lerp_angle(1.5, 0.2, next_delta_rotate_z*10))
+			if $Camera3D.position.y >= 0.20:
+				# Lerp Camera to hit ground
+				# From pos.y 1.5m to 0.2m
+				# Very choppy this way
+				# Old Way (1)
+				#$Camera3D.position.y = (lerp_angle(1.5, 0.2, next_delta_rotate_z*10))
+				
+				# Old Way (2)
+				$Camera3D.position.y = $Camera3D.position.y - clamp($Camera3D.rotation.z, 0.0, 1.0) + 0.2
+				
+				# Hybrid Way (3)
+				#$Camera3D.position.y = $Camera3D.position.y - lerp_angle(1.5, 0.2, next_delta_rotate_z*10)
+			else:
+				$Camera3D.position.y = 0.19
 			
 			$Camera3D.rotate_z(lerp_angle(0.0, deg_to_rad(90), next_delta_rotate_z))
 			
@@ -95,7 +105,7 @@ func _physics_process(delta):
 			#$Camera3D.rotation.z = target_rotation
 			
 			# Smooth linear head tilt
-			#$Camera3D.rotate_z(lerp(0.0, deg_to_rad(90), 0.1))
+			#$Camera3D.rotate_z(lerp(0.0, deg_to_rad(90), 0.05))
 			
 			# OLD WAY OF TRYING TO CURVE IT
 			#$Camera3D.rotate_z(cubic_interpolate(0.0, deg_to_rad(90), 0, deg_to_rad(90), 0.1))
