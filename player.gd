@@ -27,7 +27,7 @@ func _ready():
 	animated_sprite_2d.animation_finished.connect(shoot_anim_done)
 	# When button up / release signal is emitted from the DeathScreen button, run restart()
 	$CanvasLayer/DeathScreen/Panel/OnDeathRestartButton.button_up.connect(restart)
-	
+
 # Runs when input happens
 func _input(event):
 	
@@ -48,8 +48,7 @@ func _process(delta):
 		
 	# Restart game
 	if Input.is_action_just_pressed("restart"):
-		kill()
-		#restart()
+		restart()
 		
 	# Player is dead
 	if dead:
@@ -122,7 +121,7 @@ func _physics_process(delta):
 	else:	
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	
 	move_and_slide()
 
 func restart():
@@ -145,7 +144,7 @@ func shoot():
 
 func shoot_anim_done():
 	can_shoot = true
-	
+
 func kill():
 	dead = true
 	# Activate DeathScreen
