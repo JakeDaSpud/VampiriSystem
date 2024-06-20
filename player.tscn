@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://r0mlur02hwy0"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_txa2y"]
-[ext_resource type="Texture2D" uid="uid://bby2pvim3wa75" path="res://Assets/Programmer-Art/ProgArt_Gun_SpriteSheet.png" id="2_1xfiy"]
+[ext_resource type="Texture2D" uid="uid://bby2pvim3wa75" path="res://Assets/Programmer-Art/Programmer-Assets/ProgArt_Gun_SpriteSheet.png" id="2_1xfiy"]
 [ext_resource type="AudioStream" uid="uid://dcnfcrb24yioe" path="res://Assets/Sounds/gunshot.wav" id="3_0ht5y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vxju8"]

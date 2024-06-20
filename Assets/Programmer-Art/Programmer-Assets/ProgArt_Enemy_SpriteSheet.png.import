@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbnbbs7681anq"
-path.s3tc="res://.godot/imported/ProgArt_Enemy_SpriteSheet.png-94526c388172e8678d5ceeb6dbec6224.s3tc.ctex"
+path.s3tc="res://.godot/imported/ProgArt_Enemy_SpriteSheet.png-030b64183ac61ccaa5606672d6dfd462.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Programmer-Art/ProgArt_Enemy_SpriteSheet.png"
-dest_files=["res://.godot/imported/ProgArt_Enemy_SpriteSheet.png-94526c388172e8678d5ceeb6dbec6224.s3tc.ctex"]
+source_file="res://Assets/Programmer-Art/Programmer-Assets/ProgArt_Enemy_SpriteSheet.png"
+dest_files=["res://.godot/imported/ProgArt_Enemy_SpriteSheet.png-030b64183ac61ccaa5606672d6dfd462.s3tc.ctex"]
 
 [params]
 

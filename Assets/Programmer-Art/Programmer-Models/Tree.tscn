@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsw4q67msbm5n"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_x36gc"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rp8t1"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0iixu"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="Cylinder_Bark" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 2, 0, 0, 0, 0.6, 0, 0.999803, 0)
+mesh = SubResource("TubeTrailMesh_x36gc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder_Bark"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder_Bark/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
+
+[node name="Cube_Leaf" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.14902, -0.157489, 0, 0.582429, 0.310697, 0, 0, 0, 0.885229, -0.349602, 2.02219, 0.343032)
+mesh = SubResource("BoxMesh_0iixu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Leaf"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Leaf/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
+
+[node name="Cube_Leaf2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.705939, 0.23593, 0.540042, -0.398825, 0.504347, 0, -0.32173, -0.107524, 1.18496, 0.366507, 1.9196, -0.087904)
+mesh = SubResource("BoxMesh_0iixu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Leaf2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Leaf2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
+
+[node name="Cube_Leaf3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.511199, 0.188807, 0.810644, -1.08938, 0.520867, -0.069244, -1.40417, -0.335362, 0.348843, -0.103692, 1.97897, -0.19068)
+mesh = SubResource("BoxMesh_0iixu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Leaf3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Leaf3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
+
+[node name="Cube_Leaf4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.293469, 0.457309, 0.873455, -0.286332, -0.347576, 0.963055, 0.264865, -0.882444, 0.0733235, -0.237567, 1.87019, -0.210229)
+mesh = SubResource("BoxMesh_0iixu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Leaf4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Leaf4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
+
+[node name="Cube_Leaf5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.154972, -0.998131, -0.0311167, -0.36391, -0.279132, 0.796278, -0.286036, -0.185652, -1.02993, -0.0879952, 1.87019, 0.26005)
+mesh = SubResource("BoxMesh_0iixu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Leaf5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Leaf5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rp8t1")
