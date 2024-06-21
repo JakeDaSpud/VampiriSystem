@@ -123,6 +123,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
+	position.y = 0
 
 func restart():
 	get_tree().reload_current_scene()

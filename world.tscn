@@ -27,7 +27,7 @@ background_color = Color(0.643137, 0.643137, 0.643137, 1)
 [node name="Environment" type="Node3D" parent="."]
 
 [node name="Ground" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(10.196, -0.00132111, 0.0306754, 0.0134243, 0.995066, 0.0293081, -0.034727, -0.00322953, 9.01773, 0, 0, 0)
+transform = Transform3D(10.196, 0, 0.0314781, 0, 0.995072, 0, -0.0355909, 0, 9.01778, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_fmqar")
 mesh = SubResource("PlaneMesh_jkm28")
 surface_material_override/0 = SubResource("StandardMaterial3D_0otdo")
@@ -70,7 +70,6 @@ mesh = SubResource("BoxMesh_md0u3")
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Block4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Block4/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_2cpjo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
