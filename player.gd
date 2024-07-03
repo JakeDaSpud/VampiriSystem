@@ -40,7 +40,7 @@ func _input(event):
 		# Change facing direction vector by mouse sensitivity * amount moved
 		rotation_degrees.y -= event.relative.x * MOUSE_SENSITIVITY
 
-func _process(delta):
+func _process(_delta):
 	
 	# Exit game
 	if Input.is_action_just_pressed("exit"):
@@ -59,7 +59,7 @@ func _process(delta):
 		shoot()
 
 # Fixed update from Unity, 60 times / second
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	# Player dead, don't do anything
 	if dead:

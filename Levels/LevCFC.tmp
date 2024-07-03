@@ -1,10 +1,9 @@
-[gd_scene load_steps=36 format=3 uid="uid://cc51tex2n5us0"]
+[gd_scene load_steps=35 format=3 uid="uid://cc51tex2n5us0"]
 
 [ext_resource type="PackedScene" uid="uid://r0mlur02hwy0" path="res://player.tscn" id="1_40dhk"]
 [ext_resource type="PackedScene" uid="uid://dsw4q67msbm5n" path="res://Assets/Programmer-Art/Programmer-Models/Tree.tscn" id="1_fcnfc"]
 [ext_resource type="PackedScene" uid="uid://ckxqki7lullkd" path="res://Assets/Programmer-Art/Programmer-Models/Column.tscn" id="2_had1o"]
 [ext_resource type="PackedScene" uid="uid://chpwd8mofe76k" path="res://Assets/Programmer-Art/Programmer-Models/Fence.tscn" id="3_tsmpf"]
-[ext_resource type="Script" path="res://Levels/Trigger-Gate_Open.gd" id="4_y6j67"]
 [ext_resource type="Script" path="res://Levels/Trigger-Next_Level.gd" id="5_ggr2w"]
 
 [sub_resource type="GDScript" id="GDScript_4ldbf"]
@@ -17,7 +16,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	pass
 "
 
@@ -1038,8 +1037,6 @@ mesh = SubResource("BoxMesh_hyvu2")
 
 [node name="Trigger-Gate_Open" type="Area3D" parent="Environment/Player_Detectors"]
 transform = Transform3D(0.713006, 0, -0.701158, 0, 1, 0, 0.701158, 0, 0.713006, 39.8935, 0, 2.70919)
-collision_mask = 3
-script = ExtResource("4_y6j67")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Player_Detectors/Trigger-Gate_Open"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70211, 1.40479, -7.62939e-06)
@@ -1047,7 +1044,6 @@ shape = SubResource("BoxShape3D_mitfc")
 
 [node name="Trigger-Next_Level" type="Area3D" parent="Environment/Player_Detectors"]
 transform = Transform3D(-0.74658, 0, 0.665295, 0, 1, 0, -0.665295, 0, -0.74658, 42.5783, 0, -3.67533)
-collision_mask = 3
 script = ExtResource("5_ggr2w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Player_Detectors/Trigger-Next_Level"]
@@ -1056,6 +1052,7 @@ shape = SubResource("BoxShape3D_bvsb4")
 
 [node name="Player" parent="." instance=ExtResource("1_40dhk")]
 transform = Transform3D(0.667534, 0, -0.74458, 0, 1, 0, 0.74458, 0, 0.667534, -6.38523, 0, 3.11133)
+collision_layer = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ams4r")
