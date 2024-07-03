@@ -9,7 +9,7 @@ extends CharacterBody3D
 var dead = false
 
 # Entity Loop
-func _physics_process(delta):
+func _physics_process(_delta):
 	if dead:
 		return
 	if player == null:

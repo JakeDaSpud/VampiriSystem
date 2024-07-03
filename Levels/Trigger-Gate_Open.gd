@@ -11,11 +11,9 @@ func _ready():
 	# Set up the function
 	body_entered.connect(open_gate)
 	
-func _process(delta):
+func _process(_delta):
 	if (_opening && _gate.rotation.y < 155):
 		_gate.rotation.y = lerp_angle(_gate.rotation.y, deg_to_rad(160), 0.01)
-	else:
-		_opening
 
 func open_gate(body):
 	if (body.is_in_group("Player_Group") && !_gateOpened):

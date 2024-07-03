@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://ckbgsipx4xnxw"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_rrlrx"]
+[ext_resource type="Script" path="res://Entities/Enemy/enemy.gd" id="1_rrlrx"]
 [ext_resource type="Texture2D" uid="uid://cbnbbs7681anq" path="res://Assets/Programmer-Art/Programmer-Assets/ProgArt_Enemy_SpriteSheet.png" id="2_dbums"]
 [ext_resource type="AudioStream" uid="uid://daxp054jsy2xl" path="res://Assets/Sounds/monster_death.wav" id="3_7k4su"]
 
