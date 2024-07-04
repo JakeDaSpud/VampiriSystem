@@ -44,7 +44,8 @@ func _process(_delta):
 	
 	# Exit game
 	if Input.is_action_just_pressed("exit"):
-		get_tree().quit()
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		get_tree().change_scene_to_file("res://Scenes/Menus/Main Menu.tscn")
 		
 	# Restart game
 	if Input.is_action_just_pressed("restart"):
@@ -64,12 +65,6 @@ func _physics_process(_delta):
 	# Player dead, don't do anything
 	if dead:
 		
-		# Gradually increase interpolation factor
-		#interpolation_factor += delta / 0.2
-		
-		# Clamp the value to be 0.0 to 1.0
-		#interpolation_factor = clamp(interpolation_factor, 0.0, 1.0)
-		
 		# Lerp Camera to turn head
 		if $Camera3D.rotation.z < deg_to_rad(80):
 			
@@ -84,30 +79,12 @@ func _physics_process(_delta):
 				next_delta_rotate_z = ease(0.15, 1.5)
 			
 			if $Camera3D.position.y >= 0.20:
-				# Lerp Camera to hit ground
-				# From pos.y 1.5m to 0.2m
-				# Very choppy this way
-				# Old Way (1)
-				#$Camera3D.position.y = (lerp_angle(1.5, 0.2, next_delta_rotate_z*10))
-				
 				# Old Way (2)
 				$Camera3D.position.y = $Camera3D.position.y - clamp($Camera3D.rotation.z, 0.0, 1.0) + 0.2
-				
-				# Hybrid Way (3)
-				#$Camera3D.position.y = $Camera3D.position.y - lerp_angle(1.5, 0.2, next_delta_rotate_z*10)
 			else:
 				$Camera3D.position.y = 0.19
 			
 			$Camera3D.rotate_z(lerp_angle(0.0, deg_to_rad(90), next_delta_rotate_z))
-			
-			#var target_rotation = cubic_interpolate(0.0, deg_to_rad(180), deg_to_rad(-180), deg_to_rad(720), interpolation_factor)
-			#$Camera3D.rotation.z = target_rotation
-			
-			# Smooth linear head tilt
-			#$Camera3D.rotate_z(lerp(0.0, deg_to_rad(90), 0.05))
-			
-			# OLD WAY OF TRYING TO CURVE IT
-			#$Camera3D.rotate_z(cubic_interpolate(0.0, deg_to_rad(90), 0, deg_to_rad(90), 0.1))
 			
 		return
 	

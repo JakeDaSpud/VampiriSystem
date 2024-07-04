@@ -1,0 +1,123 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1brhp56086ok"]
+
+[ext_resource type="PackedScene" uid="uid://r0mlur02hwy0" path="res://Entities/Player/player.tscn" id="1_o5wme"]
+
+[node name="Level02Prison" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_o5wme")]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Prison Room" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Prison Room"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, -0.5)
+snap = 0.5
+size = Vector3(6, 1, 3)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.5, -5.5)
+snap = 0.5
+size = Vector3(14, 1, 7)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -0.5, -0.5)
+snap = 0.5
+size = Vector3(5, 1, 3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5, -0.5, -5.5)
+snap = 0.5
+size = Vector3(5, 1, 3)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5, -0.5, -6)
+snap = 0.5
+size = Vector3(4, 1, 5)
+
+[node name="Hallway" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Hallway"]
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Hallway/Floor"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, -0.5, -9.5)
+snap = 0.5
+size = Vector3(1, 1, 3)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Hallway/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, -0.5, -11.5)
+snap = 0.5
+size = Vector3(18, 1, 3)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Hallway/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, -0.5, -26.5)
+snap = 0.5
+size = Vector3(1, 1, 5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Hallway/Floor"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, -0.5, -22)
+snap = 0.5
+size = Vector3(18, 1, 3)
+
+[node name="Bathroom" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Bathroom"]
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Bathroom/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, -0.5, -13.5)
+snap = 0.5
+size = Vector3(6, 1, 9)
+
+[node name="Security" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Security"]
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Security/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, -0.5, -17.5)
+snap = 0.5
+size = Vector3(13, 1, 7)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Security/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, -0.5, -13.5)
+snap = 0.5
+size = Vector3(3, 1, 1)
+
+[node name="Garden" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Garden"]
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Garden/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -13.5)
+snap = 0.5
+size = Vector3(10, 1, 5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Garden/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -0.5, -13.5)
+snap = 0.5
+size = Vector3(3, 1, 3)
+
+[node name="Dorm" type="Node3D" parent="Environment"]
+
+[node name="Floor" type="Node3D" parent="Environment/Dorm"]
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Dorm/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -21.5)
+snap = 0.5
+size = Vector3(10, 1, 9)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Dorm/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, -20.5)
+snap = 0.5
+size = Vector3(1, 1, 3)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Dorm/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, -27.5)
+snap = 0.5
+size = Vector3(6, 1, 3)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Dorm/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, -0.5, -19.5)
+snap = 0.5
+size = Vector3(3, 1, 5)

@@ -17,11 +17,13 @@ func load_next_level(body):
 		print("Trying to Load Level: ", nextLevelIndex)
 		
 		if (nextLevelIndex == 99):
-			get_tree().change_scene_to_file("res://Levels/Level_99_Example.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Levels/Level_99_Example.tscn")
 		elif (nextLevelIndex == 0):
-			get_tree().change_scene_to_file("res://Levels/Level_00_Car.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Levels/Level_00_Car.tscn")
 		elif (nextLevelIndex == 1):
-			get_tree().change_scene_to_file("res://Levels/Level_01_Gates.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Levels/Level_01_Gates.tscn")
+		elif (nextLevelIndex == 2):
+			get_tree().change_scene_to_file("res://Scenes/Levels/Level_02_Prison.tscn")
 		else:
 			print("Invalid Next Level Index")
-			get_tree().change_scene_to_file("res://Levels/Level_99_Example.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Levels/Level_99_Example.tscn")

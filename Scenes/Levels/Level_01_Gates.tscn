@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dsw4q67msbm5n" path="res://Assets/Programmer-Art/Programmer-Models/Tree.tscn" id="1_fcnfc"]
 [ext_resource type="PackedScene" uid="uid://ckxqki7lullkd" path="res://Assets/Programmer-Art/Programmer-Models/Column.tscn" id="2_had1o"]
 [ext_resource type="PackedScene" uid="uid://chpwd8mofe76k" path="res://Assets/Programmer-Art/Programmer-Models/Fence.tscn" id="3_tsmpf"]
-[ext_resource type="Script" path="res://Levels/Trigger-Gate_Open.gd" id="4_y6j67"]
-[ext_resource type="Script" path="res://Levels/Trigger-Next_Level.gd" id="5_ggr2w"]
+[ext_resource type="Script" path="res://Scenes/Levels/Trigger-Gate_Open.gd" id="4_y6j67"]
+[ext_resource type="Script" path="res://Scenes/Levels/Trigger-Next_Level.gd" id="5_ggr2w"]
 
 [sub_resource type="GDScript" id="GDScript_4ldbf"]
 script/source = "extends Node3D
