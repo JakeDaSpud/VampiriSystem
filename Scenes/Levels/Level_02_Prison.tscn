@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1brhp56086ok"]
+[gd_scene load_steps=7 format=3 uid="uid://d1brhp56086ok"]
 
 [ext_resource type="PackedScene" uid="uid://r0mlur02hwy0" path="res://Entities/Player/player.tscn" id="1_o5wme"]
+[ext_resource type="Script" path="res://Scenes/Levels/Open_Door.gd" id="2_3ygfp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mppal"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jvcq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gc5sh"]
+
+[sub_resource type="Environment" id="Environment_lf1i8"]
 
 [node name="Level02Prison" type="Node3D"]
 
@@ -13,9 +22,9 @@
 [node name="Floor" type="Node3D" parent="Environment/Prison Room"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 0)
 snap = 0.5
-size = Vector3(6, 1, 3)
+size = Vector3(6, 1, 4)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Environment/Prison Room/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.5, -5.5)
@@ -37,6 +46,140 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5, -
 snap = 0.5
 size = Vector3(4, 1, 5)
 
+[node name="Bars" type="Node3D" parent="Environment/Prison Room"]
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 2, -7.5)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 2, -6.5)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.7, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2, -3.7)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2, -4.7)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5, 2, -5.7)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Environment/Prison Room/Bars"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7, 2, -1)
+use_collision = true
+radius = 0.2
+height = 4.0
+
+[node name="Player Prison Door" type="Node3D" parent="Environment/Prison Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Prison Room/Player Prison Door"]
+transform = Transform3D(1.895, 0, -7.81698e-08, 0, 3.477, 0, 7.40658e-07, 0, 0.2, -1.0205, -0.019118, 0.00608826)
+mesh = SubResource("BoxMesh_mppal")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Prison Room/Player Prison Door/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Prison Room/Player Prison Door/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_7jvcq")
+
+[node name="Area3D" type="Area3D" parent="Environment/Prison Room/Player Prison Door" node_paths=PackedStringArray("collision_trigger", "target_door")]
+transform = Transform3D(2.18872, 0, -1.95424e-07, 0, 3.88659, 0, 8.55462e-07, 0, 0.5, -1.0205, -0.019118, 0.00608826)
+collision_mask = 3
+script = ExtResource("2_3ygfp")
+collision_trigger = NodePath(".")
+target_door = NodePath("..")
+target_door_rotation = 75.0
+turns_clockwise = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Prison Room/Player Prison Door/Area3D"]
+shape = SubResource("BoxShape3D_gc5sh")
+
+[node name="Player Prison Door2" type="Node3D" parent="Environment/Prison Room"]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 2.7, 2, -4.1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Prison Room/Player Prison Door2"]
+transform = Transform3D(1.895, 0, -7.81698e-08, 0, 3.477, 0, 7.40658e-07, 0, 0.2, -1.0205, -0.019118, 0.00608826)
+mesh = SubResource("BoxMesh_mppal")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Prison Room/Player Prison Door2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Prison Room/Player Prison Door2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_7jvcq")
+
+[node name="Player Prison Door3" type="Node3D" parent="Environment/Prison Room"]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, -10.9, 2, -1.1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Prison Room/Player Prison Door3"]
+transform = Transform3D(1.895, 0, -7.81698e-08, 0, 3.477, 0, 7.40658e-07, 0, 0.2, -1.0205, -0.019118, 0.00608826)
+mesh = SubResource("BoxMesh_mppal")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Prison Room/Player Prison Door3/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Prison Room/Player Prison Door3/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_7jvcq")
+
+[node name="Player Prison Door4" type="Node3D" parent="Environment/Prison Room"]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -12.4, 2, -7.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Prison Room/Player Prison Door4"]
+transform = Transform3D(1.895, 0, -7.81698e-08, 0, 3.477, 0, 7.40658e-07, 0, 0.2, -1.0205, -0.019118, 0.00608826)
+mesh = SubResource("BoxMesh_mppal")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Prison Room/Player Prison Door4/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Prison Room/Player Prison Door4/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_7jvcq")
+
 [node name="Hallway" type="Node3D" parent="Environment"]
 
 [node name="Floor" type="Node3D" parent="Environment/Hallway"]
@@ -47,9 +190,9 @@ snap = 0.5
 size = Vector3(1, 1, 3)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Hallway/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, -0.5, -11.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -0.5, -11.5)
 snap = 0.5
-size = Vector3(18, 1, 3)
+size = Vector3(24, 1, 3)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Hallway/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, -0.5, -26.5)
@@ -66,21 +209,21 @@ size = Vector3(18, 1, 3)
 [node name="Floor" type="Node3D" parent="Environment/Bathroom"]
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Bathroom/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, -0.5, -13.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, -0.5, -15)
 snap = 0.5
-size = Vector3(6, 1, 9)
+size = Vector3(6, 1, 10)
 
 [node name="Security" type="Node3D" parent="Environment"]
 
 [node name="Floor" type="Node3D" parent="Environment/Security"]
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Security/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, -0.5, -17.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, -0.5, -18)
 snap = 0.5
-size = Vector3(13, 1, 7)
+size = Vector3(13, 1, 8)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Security/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, -0.5, -13.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, -0.5, -13.5)
 snap = 0.5
 size = Vector3(3, 1, 1)
 
@@ -89,12 +232,12 @@ size = Vector3(3, 1, 1)
 [node name="Floor" type="Node3D" parent="Environment/Garden"]
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Garden/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.5, -13.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -0.5, -14.5)
 snap = 0.5
-size = Vector3(10, 1, 5)
+size = Vector3(11, 1, 7)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Garden/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -0.5, -13.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, -0.5, -14.5)
 snap = 0.5
 size = Vector3(3, 1, 3)
 
@@ -103,21 +246,350 @@ size = Vector3(3, 1, 3)
 [node name="Floor" type="Node3D" parent="Environment/Dorm"]
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Dorm/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -21.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -23.5)
 snap = 0.5
 size = Vector3(10, 1, 9)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Dorm/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, -20.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -0.5, -22.5)
 snap = 0.5
 size = Vector3(1, 1, 3)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Dorm/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, -27.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.5, -29.5)
 snap = 0.5
 size = Vector3(6, 1, 3)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Dorm/Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, -0.5, -19.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, -0.5, -21.5)
 snap = 0.5
 size = Vector3(3, 1, 5)
+
+[node name="Wall" type="Node3D" parent="Environment"]
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.5, 1.5, -9.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 25)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33, 1.5, -20.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 6)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.5, 1.5, -22.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 13)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.5, 1.5, -13.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 7)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.5, 1.5, -13.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 11)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 1.5, -9.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 10)
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1.5, -10.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 14)
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5, 1.5, -12)
+snap = 0.5
+use_collision = true
+size = Vector3(2, 5, 3)
+
+[node name="CSGBox3D40" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.5, 1.5, -17.5)
+snap = 0.5
+use_collision = true
+size = Vector3(3, 5, 3)
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.5, 1.5, -18.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 11)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5, 1.5, -8.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 5)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5, 1.5, -3.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 5)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1, 1.5, 2.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 6)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.5, 1.5, 1.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 5)
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.5, 1.5, -31.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 3)
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 1.5, -31.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 6)
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 1.5, -28.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 4)
+
+[node name="CSGBox3D36" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.5, 1.5, -24.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 3)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5, 1.5, -2.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 3)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5, 1.5, -8.5)
+snap = 0.5
+use_collision = true
+size = Vector3(1, 5, 3)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.5, 1.5, -5.5)
+snap = 0.5
+use_collision = true
+size = Vector3(5, 5, 1)
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, 1.5, -19)
+snap = 0.5
+use_collision = true
+size = Vector3(10, 5, 1)
+
+[node name="CSGBox3D30" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, 1.5, -30)
+snap = 0.5
+use_collision = true
+size = Vector3(2, 5, 1)
+
+[node name="CSGBox3D37" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 1.5, -30)
+snap = 0.5
+use_collision = true
+size = Vector3(2, 5, 1)
+
+[node name="CSGBox3D38" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 1.5, -26.5)
+snap = 0.5
+use_collision = true
+size = Vector3(3, 5, 1)
+
+[node name="CSGBox3D39" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.5, 1.5, -17.5)
+snap = 0.5
+use_collision = true
+size = Vector3(13, 5, 1)
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.5, 1.5, -20)
+snap = 0.5
+use_collision = true
+size = Vector3(2, 5, 1)
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.5, 1.5, -28.5)
+snap = 0.5
+use_collision = true
+size = Vector3(9, 5, 1)
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5, 1.5, -18)
+snap = 0.5
+use_collision = true
+size = Vector3(8, 5, 1)
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -28.5, 1.5, -18)
+snap = 0.5
+use_collision = true
+size = Vector3(8, 5, 3)
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.5, 1.5, -15)
+snap = 0.5
+use_collision = true
+size = Vector3(10, 5, 1)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.5, 1.5, -0.5)
+snap = 0.5
+use_collision = true
+size = Vector3(3, 5, 1)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 1.5, 2.98023e-08)
+snap = 0.5
+use_collision = true
+size = Vector3(4, 5, 2)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.5, 1.5, -0.5)
+snap = 0.5
+use_collision = true
+size = Vector3(5, 5, 1)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Environment/Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.5, 1.5, -6)
+snap = 0.5
+use_collision = true
+size = Vector3(4, 5, 1)
+
+[node name="Roof" type="Node3D" parent="."]
+visible = false
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4.5, 0)
+snap = 0.5
+size = Vector3(6, 1, 4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4.5, -5.5)
+snap = 0.5
+size = Vector3(14, 1, 7)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, 4.5, -0.5)
+snap = 0.5
+size = Vector3(5, 1, 3)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5, 4.5, -5.5)
+snap = 0.5
+size = Vector3(5, 1, 3)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5, 4.5, -6)
+snap = 0.5
+size = Vector3(4, 1, 5)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.5, 3.5, -9.5)
+snap = 0.5
+size = Vector3(1, 1, 3)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3.5, -11.5)
+snap = 0.5
+size = Vector3(24, 1, 3)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 4.5, -26.5)
+snap = 0.5
+size = Vector3(1, 1, 5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.5, 3.5, -22)
+snap = 0.5
+size = Vector3(18, 1, 3)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 4.5, -15)
+snap = 0.5
+size = Vector3(6, 1, 10)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5, 4.5, -18)
+snap = 0.5
+size = Vector3(13, 1, 8)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 3.5, -13.5)
+snap = 0.5
+size = Vector3(3, 1, 1)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 4.5, -14.5)
+snap = 0.5
+size = Vector3(1, 1, 7)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4.5, -14.5)
+snap = 0.5
+size = Vector3(1, 1, 7)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 4.5, -11.5)
+snap = 0.5
+size = Vector3(9, 1, 1)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 4.5, -17.5)
+snap = 0.5
+size = Vector3(9, 1, 1)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 3.5, -14.5)
+snap = 0.5
+size = Vector3(3, 1, 3)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -23.5)
+snap = 0.5
+size = Vector3(10, 1, 9)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 3.5, -22.5)
+snap = 0.5
+size = Vector3(1, 1, 3)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4.5, -29.5)
+snap = 0.5
+size = Vector3(6, 1, 3)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 4.5, -21.5)
+snap = 0.5
+size = Vector3(3, 1, 5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lf1i8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.5, -0.836516, 0.224144, -5.28255e-08, 0.258819, 0.965926, -0.866025, 0.482963, -0.12941, -10, 10, -19)
+light_bake_mode = 1
+
+[node name="Enemies" type="Node3D" parent="."]

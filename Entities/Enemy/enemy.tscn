@@ -100,7 +100,7 @@ shape = SubResource("CapsuleShape3D_yp65e")
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.005, 0, 1, 0)
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_ejgl3")
-animation = &"idle"
+animation = &"death"
 
 [node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_7k4su")
